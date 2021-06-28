@@ -1,0 +1,31 @@
+<link rel="stylesheet" href="styles.css">
+
+<!-- reference for the external script file. -->
+<script src="event.js"></script>
+
+<!-- HTML Code -->
+<html>
+  <body class="bg">
+    <ul>
+      <!-- Navigation Bar -->
+      <li><a class="active" id="a1" onclick="changeLabel1()" href=#linux>Linux Command</a></li>
+      <li><a id="a2" onclick="changeLabel2()" href=#kubernetes>Kubernetes Command</a></li>  
+    </ul>
+    <br>
+    <center>
+      <div id="box">
+        <label id="l1" for="kubernetes">Kubernetes Command</label>
+        <!-- Input Box -->
+        <input type="text" id="in1" name="command" placeholder="Enter Command..." onkeyup="autoType()" >
+        <!-- RUN Button -->
+        <input id="submit" type="button" value="RUN"  onclick="sendBackEnd()">
+      </div>
+
+      <!-- Reformat -->
+      <pre>
+        <div id="output">[root@localhost ~]# </div>
+      </pre>
+    </center>
+    </div>
+  </body>
+</html>
